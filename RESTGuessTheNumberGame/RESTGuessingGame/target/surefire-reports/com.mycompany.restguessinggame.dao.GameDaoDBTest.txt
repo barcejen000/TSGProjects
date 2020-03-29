@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.restguessinggame.dao.GameDaoDBTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.846 s - in com.mycompany.restguessinggame.dao.GameDaoDBTest

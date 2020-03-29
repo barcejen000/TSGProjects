@@ -1,0 +1,15 @@
+com\mycompany\restguessinggame\controller\GuessingGameController.class
+com\mycompany\restguessinggame\dao\GameDaoDB$GameMapper.class
+com\mycompany\restguessinggame\dao\GameDaoDB.class
+com\mycompany\restguessinggame\service\GameDoesNotExistException.class
+com\mycompany\restguessinggame\entity\Game.class
+com\mycompany\restguessinggame\service\InvalidDataException.class
+com\mycompany\restguessinggame\dao\RoundDaoDB.class
+com\mycompany\restguessinggame\App.class
+com\mycompany\restguessinggame\entity\Round.class
+com\mycompany\restguessinggame\controller\Error.class
+com\mycompany\restguessinggame\controller\GuessingGameControllerExceptionHandler.class
+com\mycompany\restguessinggame\dao\GameDao.class
+com\mycompany\restguessinggame\service\GuessingGameService.class
+com\mycompany\restguessinggame\dao\RoundDaoDB$RoundMapper.class
+com\mycompany\restguessinggame\dao\RoundDao.class
