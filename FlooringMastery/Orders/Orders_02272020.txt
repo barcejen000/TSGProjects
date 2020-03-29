@@ -1,0 +1,3 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+1,FLOORING NEEDS AND MORE,KY,6.00,Carpet,100,2.25,2.10,225.00,210.00,26.10,461.10
+2,FLOOR DEPOT,WA,9.25,Wood,102,5.15,4.75,525.30,484.50,93.41,1103.21

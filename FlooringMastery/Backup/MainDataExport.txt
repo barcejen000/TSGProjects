@@ -1,0 +1,37 @@
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< TSG Corp. Active Orders >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+============================================File content for file Orders_02272020.txt============================================
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total,Date
+1,FLOORING NEEDS AND MORE,KY,6.00,Carpet,100,2.25,2.10,225.00,210.00,26.10,461.10,02-27-2020
+2,FLOOR DEPOT,WA,9.25,Wood,102,5.15,4.75,525.30,484.50,93.41,1103.21,02-27-2020
+============================================File content for file Orders_02282020.txt============================================
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total,Date
+1,Flooring Co,CA,25.00,Carpet,142,2.25,2.10,319.50,298.20,154.43,772.13,02-28-2020
+2,Home Depot,WA,9.25,Tile,350,3.50,4.15,1225.00,1452.50,247.67,2925.17,02-28-2020
+3,Lowe's,KY,6.00,Laminate,394,1.75,2.10,689.50,827.40,91.01,1607.91,02-28-2020
+4,All floors co,wa,9.25,Carpet,247,2.25,2.10,555.75,518.70,99.39,1173.84,02-28-2020
+5,Flooring Essentials ltd.,tx,4.45,Tile,125,3.50,4.15,437.50,518.75,42.55,998.80,02-28-2020
+6,Floors & more,KY,6.00,Tile,780,3.50,4.15,2730.00,3237.00,358.02,6325.02,02-28-2020
+7,floor and more,ca,25.00,Wood,100,5.15,4.75,515.00,475.00,247.50,1237.50,02-28-2020
+8,Floor Depot,tx,4.45,Wood,100,5.15,4.75,515.00,475.00,44.06,1034.06,02-28-2020
+9,Jame's flooring co 2,ca,25.00,Tile,125,3.50,4.15,437.50,518.75,239.06,1195.31,02-28-2020
+10,flooring depot,ky,6.00,Carpet,100,2.25,2.10,225.00,210.00,26.10,461.10,02-28-2020
+============================================File content for file Orders_03012020.txt============================================
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total,Date
+1,james,tx,4.45,Tile,1000,3.50,4.15,3500.00,4150.00,340.43,7990.43,03-01-2020
+3,Floors and beyond,ca,25.00,Wood,1000,5.15,4.75,5150.00,4750.00,2475.00,12375.00,03-01-2020
+5,floor ltd co,ca,25.00,Wood,5600,5.15,4.75,28840.00,26600.00,13860.00,69300.00,03-01-2020
+============================================File content for file Orders_03022020.txt============================================
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total,Date
+1,james,tx,4.45,Carpet,1000,2.25,2.10,2250.00,2100.00,193.58,4543.58,03-02-2020
+============================================File content for file Orders_06012013.txt============================================
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total,Date
+1,Ada Lovelace,CA,25.00,Tile,249.00,3.50,4.15,871.50,1033.35,476.21,2381.06,06-01-2013
+============================================File content for file Orders_06022013.txt============================================
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total,Date
+2,Doctor Who,WA,9.25,Wood,243.00,5.15,4.75,1251.45,1154.25,216.51,2622.21,06-02-2013
+3,Abraham Lincoln,WA,9.25,Wood,468,5.15,4.75,2410.20,2223.00,428.57,5061.77,06-02-2013
+============================================File content for file Orders_09091999.txt============================================
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total,Date
+1,Doctor Who,WA,9.25,Wood,243.00,5.15,4.75,1251.45,1154.25,216.51,2622.21,09-09-1999
+2,Albert Einstein,KY,6.00,Carpet,217.00,2.25,2.10,488.25,455.70,56.64,1000.59,09-09-1999
+7,Flooring Co,WA,9.25,Wood,243.00,5.15,4.75,1251.45,1154.25,216.51,2622.21,09-09-1999

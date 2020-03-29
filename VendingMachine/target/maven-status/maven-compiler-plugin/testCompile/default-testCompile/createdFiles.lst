@@ -1,0 +1,4 @@
+com\mycompany\vendingmachine\service\VendingMachineServiceTest.class
+com\mycompany\vendingmachine\dao\VendingMachineAuditDaoMock.class
+com\mycompany\vendingmachine\dao\VendingMachineDaoMock.class
+com\mycompany\vendingmachine\dao\VendingMachineDaoFileImplTest.class

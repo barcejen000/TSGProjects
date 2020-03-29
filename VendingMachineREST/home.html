@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+        <title>Vending Machine</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/home.css" media="screen"/>
+    </head>
+    <body>
+      <h1 style="text-align:center"> Vending Machine </h1>
+      <hr/>
+      <div class = "container">
+        <div class ="row">
+          <div class= "col-8" id="itemSide">
+          <div class="row" id="itemsRow">
+          </div>
+        </div>
+
+        <div class="col-4" id="stackedForms">
+            <form class="justify-content-center" id ="moneyForm">
+              <div class ="form-group" style="text-align:center">
+                <label for="moneyDisplay" class="font-weight-bold"> Total $ In </label><br/>
+                <input type="text" class= "col-6" id="moneyDisplay"  style="text-align:center" placeholder="0.00" readonly>
+              </div>
+              <div class ="form-group" class ="row" style="text-align:center">
+                  <button type="button" class = "btn btn-secondary col-4" value ="1.00" id="dollarButton" >
+                  Add Dollar
+                  </button>
+                    <button type="button" class = "btn btn-secondary col-4" value ="0.25" id="quarterButton" >
+                    Add Quarter
+                    </button>
+              </div>
+              <div class ="form-group" class ="row" style="text-align:center">
+                      <button type="button" class = "btn btn-secondary col-4" value="0.10" id="dimeButton" >
+                      Add Dime
+                      </button>
+                        <button type="button" class = "btn btn-secondary col-4" value="0.05" id="nickelButton">
+                        Add Nickel
+                        </button>
+              </div>
+            </form>
+            <hr/>
+            <form class="justify-content-center" id ="businessForm">
+              <div class ="form-group" style="text-align:center">
+                <label for="messageDisplay" class="font-weight-bold"> Messages </label><br/>
+                <input type="text" class= "col-8" id="messageDisplay" style="text-align:center" placeholder=" " readonly>
+              </div>
+              <div class ="form-group" class ="row" style="text-align:center">
+                <label for="itemDisplay" class="font-weight-bold"> Item:</ label>
+                <input type="text" class= "col-4" id="itemDisplay" style="text-align:center" placeholder=" " readonly>
+              </div>
+              <div class ="form-group" class ="row" style="text-align:center">
+                      <button type="button" class = "btn btn-success col-8" id="buyButton" >
+                      Make Purchase
+                      </button>
+              </div>
+            </form>
+            <hr/>
+            <form class="justify-content-center" id ="changeForm">
+              <div class ="form-group" style="text-align:center">
+                <label for="changeDisplay" class="font-weight-bold"> Change </label><br/>
+                <input class= "col-12" type="text"  id="changeDisplay" style="text-align:center" placeholder=" " readonly>
+              </div>
+              <div class ="form-group" class ="row" style="text-align:center">
+                      <button type="button" class = "btn btn-danger col-8"  id="changeButton" >
+                      Return Change
+                      </button>
+              </div>
+            </form>
+        </div>
+        </div>
+      </div>
+        <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src='js/home.js'></script>
+    </body>
+</html>

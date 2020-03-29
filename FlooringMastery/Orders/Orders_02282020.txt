@@ -1,0 +1,11 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+1,Flooring Co,CA,25.00,Carpet,142,2.25,2.10,319.50,298.20,154.43,772.13
+2,Home Depot,WA,9.25,Tile,350,3.50,4.15,1225.00,1452.50,247.67,2925.17
+3,Lowe's,KY,6.00,Laminate,394,1.75,2.10,689.50,827.40,91.01,1607.91
+4,All floors co,wa,9.25,Carpet,247,2.25,2.10,555.75,518.70,99.39,1173.84
+5,Flooring Essentials ltd.,tx,4.45,Tile,125,3.50,4.15,437.50,518.75,42.55,998.80
+6,Floors & more,KY,6.00,Tile,780,3.50,4.15,2730.00,3237.00,358.02,6325.02
+7,floor and more,ca,25.00,Wood,100,5.15,4.75,515.00,475.00,247.50,1237.50
+8,Floor Depot,tx,4.45,Wood,100,5.15,4.75,515.00,475.00,44.06,1034.06
+9,Jame's flooring co 2,ca,25.00,Tile,125,3.50,4.15,437.50,518.75,239.06,1195.31
+10,flooring depot,ky,6.00,Carpet,100,2.25,2.10,225.00,210.00,26.10,461.10

@@ -1,0 +1,16 @@
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\App.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\dao\VendingMachineDaoFileImpl.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\ui\UserIOConsoleImpl.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\dao\VendingMachineDao.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\dao\VendingMachineAuditDaoFileImpl.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\ui\VendingMachineView.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\dao\VendingMachineDaoException.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\dto\Change.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\service\NoItemInventoryException.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\dao\VendingMachineAuditDao.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\dto\VendingMachine.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\controller\VendingMachineController.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\service\VendingMachineService.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\controller\VendingMachineBalance.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\ui\UserIO.java
+C:\Users\jenni\Documents\Repository\java-mpls-0120k-summative-m3-barcejen000\VendingMachine\src\main\java\com\mycompany\vendingmachine\service\InsufficientFundsException.java

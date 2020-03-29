@@ -1,0 +1,4 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+1,Home Depot,tx,4.45,Carpet,1000,2.25,2.10,2250.00,2100.00,193.58,4543.58
+2,Smith and Sons Co.,ky,6.00,Tile,1000,3.50,4.15,3500.00,4150.00,459.00,8109.00
+3,Flooring Essentials and More,ca,25.00,Wood,1000,5.15,4.75,5150.00,4750.00,2475.00,12375.00
