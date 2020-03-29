@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Factorizer</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h1>Factorizer</h1>
+    <hr/>
+    <p> What Number would you like to Factor?</p>
+    <p th:text="${error}">error text</p>
+    <form action = "/number" method ="POST">
+        <input type ="number" name ="inputNumber"/>
+        <button type ="submit"> Submit Number</button>
+    </form>
+    <h3 th:text="${displayNumber}">displays number</h3>
+    <p> 
+        Factors for your number: <span th:text ="${displayFactors}"> factors </span>
+            
+    </p>
+    <p th:if="${prime == true }"> Is a prime number</p>
+    <p th:if="${prime == false }"> Is NOT a prime number</p>
+    <p th:if="${perfect == true }"> Is a perfect number</p>
+    <p th:if="${perfect == false }"> Is NOT a perfect number</p>
+   
+    </body>
+</html>
