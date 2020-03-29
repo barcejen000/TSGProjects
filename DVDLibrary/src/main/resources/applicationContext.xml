@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="io" class="com.mycompany.dvdlibrary.ui.UserIOConsoleImpl"/>
+
+<bean id="view" class="com.mycompany.dvdlibrary.ui.DVDLibraryView">
+    <constructor-arg ref ="io"/>
+</bean>
+
+<bean id="dao" class="com.mycompany.dvdlibrary.dao.DVDLibraryDaoFileImpl"/>
+
+<bean id="controller" class="com.mycompany.dvdlibrary.controller.DVDLibraryController">
+    <constructor-arg ref ="view"/>
+    <constructor-arg ref ="dao"/>
+</bean>
+</beans>
