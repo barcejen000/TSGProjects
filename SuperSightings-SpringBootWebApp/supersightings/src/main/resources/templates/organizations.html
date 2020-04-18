@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Superhero Sightings</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Bangers|Faster+One|Open+Sans&display=swap" rel="stylesheet">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    </head>
+    <body id="orgBody">
+        <div class="container">
+            <div class ="row m-4">
+                <div id="headerDiv" class ="col text-center" style="background-color:#F30003">
+                    <h1 style="color:#F8CF17">Superhero Sightings Tracker</h1>   
+                </div>
+            </div>
+            <div id="navigationBarDiv">
+            <ul>
+                <li style="float:left"><a href="home">Home</a></li>
+                <li style="float:left"><a href="locations">Locations</a></li>
+                <li style="float:left"><a href="sightings">Sightings</a></li>
+                <li style="float:left"><a href="supers">Supers</a></li>
+                <li style="float:left"><a class="active" href="organizations">Organizations</a></li>
+                <li style="float:right"><a href="contact">Contact Us</a></li>
+            </ul> 
+            </div>
+                <div>
+                    <h2 class="col-12 text-center m-3" id="orgH2">Register Organization</h2>
+                </div>
+                <div class ="row m-4">
+                <div class="col-9 text-center m-3">
+                    <form action="addOrganization" method="POST">
+                        <div class="form-group row">
+                            <div class="col-2">
+                            </div>
+                            <label for="name" class="col-2 col-form-label">
+                             Name:    
+                            </label>
+                            <div class="col-8">
+                                <input type="text" name="name" id="name" class="form-control"/>
+                                <div th:if="${#fields.hasErrors('organization.name')}">
+                                <p th:each="error : ${#fields.errors('organization.name')}" class="alert alert-danger"
+                                th:text="${error}"> Bad org name </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-2">
+                            </div>
+                            <label for="type" class="col-2 col-form-label">
+                            Type:    
+                            </label>
+                            <div class="col-8">
+                                <div class ="row">
+                                <div class="col-6"> 
+                                <input type="radio" name="type" id="type" value="false" class="form-control" required/>
+                                <label for="type">Supervillain</label>
+                                 <div th:if="${#fields.hasErrors('organization.type')}">
+                                <p th:each="error : ${#fields.errors('organization.type')}" class="alert alert-danger"
+                                th:text="${error}"> Bad org type </p>
+                                </div>
+                                </div>
+                                <div class="col-6">
+                                <input type="radio" name="type" id="type" value="true" class="form-control" required/>
+                                <label for="type">Superhero</label>
+                                <div th:if="${#fields.hasErrors('organization.type')}">
+                                <p th:each="error : ${#fields.errors('organization.type')}" class="alert alert-danger"
+                                th:text="${error}"> Bad org type </p>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-2">
+                            </div>
+                            <label for="description" class="col-2 col-form-label">
+                            Description:    
+                            </label>
+                            <div class="col-8">
+                              <textArea type="text" name="description" id="description" class="form-control"/></textArea>
+                            <div th:if="${#fields.hasErrors('organization.description')}">
+                                <p th:each="error : ${#fields.errors('organization.description')}" class="alert alert-danger"
+                                th:text="${error}"> Bad org description </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-2">
+                            </div>
+                            <label for="address" class="col-2 col-form-label">
+                            Address:   
+                            </label>
+                            <div class="col-8">
+                                <input type="text" name="address" id="address" class="form-control"/>
+                             <div th:if="${#fields.hasErrors('organization.address')}">
+                                <p th:each="error : ${#fields.errors('organization.address')}" class="alert alert-danger"
+                                th:text="${error}"> Bad org address </p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="form-group row">
+                            <div class="col-2">
+                            </div>
+                            <label for="contact" class="col-2 col-form-label">
+                            Phone Number:   
+                            </label>
+                            <div class="col-8">
+                                <input type="tel" pattern ="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"  name="contact" id="contact" class="form-control"/>
+                              <div th:if="${#fields.hasErrors('organization.contact')}">
+                                <p th:each="error : ${#fields.errors('organization.contact')}" class="alert alert-danger"
+                                th:text="${error}"> Bad org contact </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-2">
+                            </div>
+                            <label for="members" class="col-2 col-form-label">
+                            Select Members:   
+                            </label>
+                            <div class="col-8">
+                                <div:block th:each ="member:${members}" class="form-control">
+                                <input type="checkbox" id="members" name="superId"
+                                          th:value="${member.id}">
+                                </input>
+                                  <label for="members" th:text="${member.name}">Superperson Name</label>
+                                </div:block>
+                                <div th:if="${#fields.hasErrors('organization.members')}">
+                            <p th:each="error : ${#fields.errors('organization.members')}" 
+                            class="alert alert-danger" th:text="${error}"> 
+                         Bad member </p>
+                        </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                       <div class="col-4">
+                       </div>
+                       <div class="col-8">
+                           <button type="submit" class ="btn col-12"> Add Organization <i class='fas fa-users' style='font-size:20px'></i></button>
+                       </div>  
+                        </div>
+                    </form>
+                     </div>   
+                </div>
+            <div id="orgTableDiv">
+                <div class="row">
+             <h2 class="col-12 text-center m-3" id="superH2">Current Super Orgs</h2>
+                </div>
+                <div class="row">
+                <div class="col-12 text-center">
+                      <table id="organizationTable" class="table table-striped">
+                         <thead>
+                             <tr>
+                             <th id="orgHRow">Org ID</th>
+                             <th id="orgHRow">Name</th>
+                             <th id="orgHRow">Category</th>
+                             <th id="orgHRow">Address</th>
+                             <th id="orgHRow">Contact</th>
+                             <th id="orgHRow">Details</th>
+                             <th id="orgHRow">Edit</th>
+                             <th id="orgHRow">Delete</th>
+                             </tr>
+                         </thead> 
+                         <tbody>
+                            <tr th:each="organization : ${organizations}">
+                                <td th:text="${organization.id}"> Org ID</td>
+                                <td th:text="${organization.name}"> Org Name</td>
+                                <td th:if="${organization.type}== true"> Superhero</td>
+                                <td th:if="${organization.type}== false"> Supervillain</td>
+                                <td th:text="${organization.address}"> Org address</td>
+                                <td th:text="${organization.contact}"> Org contact</td>
+                                <td><a id="buttonAtag" type="button" class= "btn btn-info" href="#" th:href="@{/viewOrganization(id=${organization.id})}">View Details</a></td>
+                                <td><a id="buttonAtag" type="button" class= "btn btn-primary" href="#" th:href="@{/editOrganization(id=${organization.id})}" >Edit</a></td>
+                                <td><button id="buttonAtag" type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal" th:attrappend="data-target=${organization.id}"  th:text="'Delete '+${organization.name}">Delete</button></td>
+                                <div class="modal fade" role="dialog" id="deleteModal" th:attrappend="id=${organization.id}">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title">Confirm Delete</h3>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p th:text="'Are you sure you want to delete '+${organization.name}+ '?'"> question</p>
+                                        </div>
+                                            <div class="modal-footer">
+                                                <button id="buttonAtag" href="organizations" type="button" class="btn btn-danger" data-dismiss="modal">Cancel Delete</button>
+                                                <a id ="buttonAtag" th:href="@{/deleteOrganization(id=${organization.id})}" type="button" class="btn btn-success">Confirm Delete</a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </tr>
+                         </tbody>
+                   </table>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- Main Body of Page -->
+
+        <!-- End main body -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

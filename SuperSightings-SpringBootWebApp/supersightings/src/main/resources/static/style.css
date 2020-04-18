@@ -1,0 +1,240 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 30, 2020, 11:19:44 AM
+    Author     : jenni
+*/
+
+body{
+background-color:#FADA5E;
+}
+
+#welcomeMessage, #contactMessage{
+ font-family: 'Patrick Hand SC', cursive;
+ font-size: 20px;
+ color:#F30003
+}
+
+#newsPage{
+ background-color:#F2F4E5;
+  height: 600px;
+ overflow: scroll;
+ border: 3px solid black;
+}
+#indexBody, #homeBody, #viewBody{
+background-color:dodgerblue;
+}
+#orgBody, #sightBody{
+background-color:#A6D608;   
+}
+
+#orgHRow, #sightHRow{
+ text-shadow: 0.5px 0.5px #A6D608;
+  font-size:18px;
+}
+
+#googleMap{
+    display: inline-block; 
+    width:100%;
+    height:100%;
+    background-color:#F2F4E5;
+}
+
+#gMap{
+  display: inline-block; 
+    width:100%;
+    height:100%;
+    background-color:#F2F4E5;
+}
+
+#sightingMap, #locationMap{
+  display: inline-block; 
+  height: 400px;
+  width: 100%;
+}
+
+h1,ul,th,label,h3,#locationNews {
+font-family: 'Open Sans', sans-serif;
+font-family: 'Bangers', cursive;
+}
+
+#superInNews{
+    font-family: 'Bangers', cursive;
+/*    color:black;*/
+/*    text-shadow: 0.5px 0.5px royalblue;*/
+    font-size:20px;
+}
+
+#supersSighted{
+    font-family: 'Faster One', cursive;
+    color:black;
+    font-size:25px;
+/*    text-decoration: underline;*/
+}
+#newsTitle{
+   font-family: 'Montserrat Subrayada', sans-serif;
+/*   text-shadow: 2px 2px dodgerblue;*/
+   font-size:30px;
+   color:black;
+}
+
+#newsHeader{
+   font-family: 'Montserrat Subrayada', sans-serif;
+    font-size:50px;
+    color:black;
+}
+
+th{
+  text-shadow: 0.5px 0.5px #FEE715;
+  font-size:18px;
+}
+
+h1 {
+  text-shadow: 2px 2px #3836FD;
+  font-size:50px;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3836FD;
+  list-style-type: none;
+}
+
+#headerDiv{
+    border: solid;
+    border-color: #3836FD;
+    
+}
+
+#individualLocation, #individualSuper, #individualOrg, #individualSighting{
+    background-color:#F2F4E5;
+    border: 5px solid;
+    border-color: #F30003;
+    font-family: 'Bangers', cursive;
+    font-size: 18px;
+}
+
+/*#superTableDiv{
+    border-style: solid;
+    border-color: #3836FD;
+    background-color: #F30003;
+}*/
+li:last-child{
+    border-left:1px solid #F30003;
+}
+
+li{
+  border-right:1px solid #F30003;
+}
+
+.active{
+    background-color: #F30003;
+}
+
+li a{
+    display:block;
+    text-decoration: none;
+    text-align:center;
+    color:#FEE715;
+    padding: 14px 16px;
+    text-shadow: 0.5px 0.5px #F30003;
+    font-size:20px;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+#buttonAtag{
+  font-family: 'Bangers', cursive;  
+  text-shadow: none;
+}
+
+li a:hover:not(.active){
+    background-color:#F8CF17;
+}
+
+#locationLinkNews:hover{
+    color:royalblue;
+}
+
+#superTable,#organizationTable, #sightingTable, #locationTable{
+     background-color:#F2F4E5;
+    
+}
+
+/* tr:hover {
+          background-color:#FADA5E;;
+        }*/
+/*.table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(even)>th {
+   background-color:#F2F4E5;
+}*/
+
+h2{
+font-family: 'Faster One', cursive;
+/*text-shadow: 0.5px 0.5px #F30003;*/
+color:#3836FD;
+font-size: 45px;
+}
+
+#firstHrNews{
+    border: 1px solid black;
+}
+
+#secondHrNews{
+    border: 7px solid black;
+}
+
+#cancelEditButton{
+    font-family: 'Bangers', cursive;
+    background-color: #F30003; 
+    color: #3836FD;
+    text-shadow: 0.5px 0.5px #FEE715;
+    font-size: 16px;
+}
+
+#changePicture{
+    font-family: 'Bangers', cursive;
+    background-color: #F8CF17; 
+    color: #3836FD;
+    text-shadow: 0.5px 0.5px #FEE715;
+    font-size: 16px;
+    
+}
+button{
+    font-family: 'Bangers', cursive;
+    background-color: #3836FD; 
+    color: #F30003;
+    text-shadow: 0.5px 0.5px #FEE715;
+/*    font-size: 75px;*/
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 100%;
+    height: 1.15em;
+}
+
+#superPic{
+  height: 325px;
+  width: 338px;
+  justify-content: center;
+  border: 3px solid #F30003; 
+ 
+}
+
+#superSightPic{
+  height: 175px;
+  width: 145px;
+  justify-content: center;
+  border: 3px solid black; 
+ 
+}
+
