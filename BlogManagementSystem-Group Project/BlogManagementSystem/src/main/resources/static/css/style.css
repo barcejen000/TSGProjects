@@ -1,0 +1,212 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 7, 2020, 1:32:47 PM
+    Author     : jenni
+*/
+
+#homeBody, #adminBody{
+    background-color:#B1DADE;
+}
+#individualArticle{
+    background-color:#B0d982;
+}
+
+table, td, th {
+    border: 2px solid lightslategray;
+}
+
+#div1{
+    width: 5px;
+    height: 25px;
+    border: 1px solid gold;
+    background-color:gold;
+    color: darkred;
+}
+
+h1{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 55px;
+}
+#welcomeMessageDiv{
+}
+
+#feedHeader{
+  font-family: 'Fredericka the Great', cursive;
+    font-size: 40px;
+}
+
+#textUnderTitle{
+    font-family: 'Aref Ruqaa', serif;
+}
+#headerDiv{
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/back_our/20190619/ourmid/pngtree-food-overlooking-the-background-banner-image_138613.jpg');
+} 
+
+#approvalFormDiv, #welcomeMessageDiv{
+    background-color:#AEC33A;
+    border: 2px solid #496A23;
+}
+#displayRejectedBlogs, #displayApprovedBlogs,#displayUnapprovedBlogs{
+    background-color:#aee7f8;
+    border: 2px solid #115296;
+}
+#featuredArticle{
+    background-color:#C9E3DB;
+}
+
+#latestBlogs{
+    background-color:#F2F4E5;
+    height: 900px;
+    overflow: scroll;
+    border: 3px solid #496A23;
+}
+#addBlogDiv, #displayBlogsDiv, #displayHashtagDivs{
+    background-color:#F2F4E5;
+    border: 3px solid #496A23;
+    margin: auto;
+}
+#picture{
+    width: 90%;
+    height: 210px;
+}
+
+#hashtagSelector {
+    display: block;
+    background-color: #F2F4E5;
+    border: 3px solid #496A23;
+    border-radius: 10px;
+    width: 100%;
+    overflow-style: none;
+}
+
+#addUser, #listUsers, #blogToApprove, #editUserForm, #changePasswordForm, #blogsRejected , #searchByHashTag, #searchBytitle, #searchByAuthor{
+    background-color:#F2F4E5;
+    border: 3px solid #496A23;
+    margin: auto;
+}
+#blogDropdown{
+    position: relative;
+    display: inline-block;
+}
+
+/*.sidebar-box {
+  max-height: 200px;
+  position: relative;
+}*/
+
+#commentPicture {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.wrap {
+    display: block;
+    padding-left: 100px;
+}
+#body {
+    display: block;
+    height: 100px;
+    width: 100%;
+}
+.read-more { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    text-align: center; 
+    margin: 0; padding: 5px 0; 
+    background-image: linear-gradient(to bottom, transparent, #BEBEBE);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;left:0;
+    background-color: #f1f1f1;
+    min-width: 105px;
+    z-index: 1;
+}
+
+#hashtagAddDiv{
+    resize: both;
+    overflow: auto;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+#blogForm{
+    width: 900px;
+    margin: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #204B24;
+    list-style-type: none;
+}
+
+#loginTab{
+    border-left:1px solid #B1DADE;
+}
+
+li{
+    border-right:1px solid #B1DADE;
+}
+
+.active{
+    background-color:#258039;
+}
+
+#hrCommentLine {
+    background-color: #ddd;
+    border: none;
+    display: block;
+    height: 3px;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+}
+
+#hrCommentLine:before {
+    background-color: lightseagreen;
+    content: '';
+    display: block;
+    height: 6px;
+    left: 0;
+    position: absolute;
+    top: -2px;
+    width: 20%;
+    z-index: 1;
+}
+
+li a{
+    display:block;
+    text-decoration: none;
+    text-align:center;
+    color: #f2d388;
+    padding: 14px 16px;
+    /*    text-shadow: 0.2px 0.2px white;*/
+    font-size:20px;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+li a:hover:not(.active){
+    background-color: #F2F4E5;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+ 
+        <head>
+            <title>Blog Management System</title>
+            <meta charset="UTF-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+                <link rel="stylesheet" type="text/css" href="css/style.css">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                      <link href="https://fonts.googleapis.com/css?family=Pangolin|Fredericka+the+Great|Aref+Ruqaa|Pathway+Gothic+One|Pragati+Narrow&display=swap" rel="stylesheet">
+                        </head>
+
+                        <body id="homeBody">
+                            <div class="container">
+                                <div class ="row m-4">
+                                    <div id="headerDiv" class ="col text-center">
+                                        <br/>
+                                        <h1 class="m-2" style="color:#496A23">&emsp;&emsp;&emsp;&emsp;&emsp; Great Eats and Tasty Treats!</h1> 
+                                        <h4 id="textUnderTitle" style="color: #f2d388"><b> Welcome to my Kitchen!</b></h4>
+                                        <h2 style="color:red" th:if="${#request.getParameter('login_error') == '1'}">Wrong id or password!!</h2>
+                                        <br/>
+                                        <div style="float:right" sec:authorize="isAuthenticated()">
+                                            <form class="form-inline" 
+                                                  method="POST" 
+                                                  action="/logout">
+                                                <input type="hidden" 
+                                                       th:name="${_csrf.parameterName}" 
+                                                       th:value="${_csrf.token}"/>
+                                                <label for="submit">
+                                                    <span style="color:#AEC33A" th:text="'Logged In: '+ ${#authentication.name} +'&nbsp;&nbsp;&nbsp;|'">
+                                                    </span>
+                                                </label>
+                                                <button class="btn btn-link" 
+                                                        id="submit" 
+                                                        type="submit">Logout</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="navigationBarDiv">
+                                    <ul>
+                                        <li style="float:left"><a href="home">HOME</a></li>
+                                        <li style="float:left"><a class="active" href="blogs">BLOGS</a></li>
+                                        <li style="float:left"><a href="searches">SEARCH</a></li>
+                                        <li style="float:left"><a sec:authorize="hasRole('ROLE_ADMIN')" href="admin">ADMIN</a></li>
+                                        <li style="float:left"><a sec:authorize="hasRole('ROLE_USER')" href="users">USERS</a></li>
+                                    </ul> 
+                                </div>
+                                <div id="displayBlogsDiv" class="m-4">
+                                    <div clas="row m-4">
+                                        <div id="individualArticle" class="border border-dark col-11 m-5">
+                                            <div class="row">
+                                                <div class="col-10 m-3">
+                                                    <h2 th:text="${article.title}">title </h2>
+                                                    <p th:text="'POSTED ON '+ ${#temporals.format(article.postDate, 'MMMM dd, yyyy')} + ' BY ' +${article.user.username}">post date</p>
+                                                </div>
+                                                <div style="text-align:right" class="col-1 m-3" id="blogDropdown">
+                                                    <button onclick="showBlogOpts()" class="dropbtn">
+                                                        <i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <div style="text-align:center" id="dropOptions" class="dropdown-content">
+                                                        <a href="blogs">View All Blogs</a>
+                                                        <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/editBlog(id=${article.id})}">Edit</a>
+                                                        <a sec:authorize="hasRole('ROLE_ADMIN')" type="button" data-toggle="modal" data-target="#deleteBlog" th:attrappend="data-target=${article.id}">Delete</a>
+                                                    </div>
+                                                    <div class="modal fade" role="dialog" id="deleteBlog" th:attrappend="id=${article.id}">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h3 class="modal-title">Confirm Delete</h3>
+                                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <p style="text-align:left" th:text="'Are you sure you want to delete '+${article.title}+ '?'"> question</p>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button id="buttonAtag" href="blogs" type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                                                    <a type="button" id="buttonAtag" th:href="@{/deleteBlog(id=${article.id})}" class="btn btn-success">Confirm Delete</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="row">
+                                                <div class="col-11 m-3">
+                                                    <textArea th:text="${article.content}" id="myViewArea" class="form-control"/></textArea>
+                                                </div>
+                                            </div>
+                                            <div class="row m-3">
+                                                <p> Tags: &nbsp;  </p>
+                                                <span th:each="hashtag:${article.hashtags}">
+                                                    <a th:href= "@{/searchBlogsByHashtag(hashtagIds=${hashtag.name})}" th:text="' #'+${hashtag.name}+ ' '"></a>
+                                            </div>
+                                            <div class="row m-3">
+                                                <br/>
+                                                <h4 class="col-9">Comments</h4>
+                                                <button type="button" id="viewCommentsButton" class="btn btn-info col-3">View Comments</button>
+                                                <button type="button" id="hideCommentsButton" class="btn btn-info col-3">Hide Comments</button>
+                                            </div>
+                                            <br/>
+                                            <div id="newComment">
+                                                <button type="button" class="btn input-block-level btn-success" data-toggle="modal" data-target="#myCommentModal"> Add Comment</button>
+                                                <div id="myCommentModal" class="modal fade" role="dialog">
+                                                    <div class="modal-dialog">
+
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title">New Comment</h4>
+                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form class="form-horizontal" role="form" method="POST" action="/addComment">
+                                                                    <div class="col-1">
+                                                                        <img id="commentPicture" src="https://www.shazam.com/resources/9a8ea951f82d752342c7570f4182315bd2c771e4/no-artist-image.jpg"/>
+                                                                    </div>
+                                                                    <div class="col-11">
+                                                                        <div class="wrap">
+                                                                            <form>
+                                                                                <input class="col" type="text" id="title" name="title" placeholder="Comment Title" required/>
+                                                                                <textarea class="col bodyComment" id="body" name="body" placeholder="Join the discussion..." required></textarea>
+                                                                        </div>
+                                                                        <input type="hidden" name="articleId" id="articleId" th:value="${article.id}"/>
+                                                                        <input type="hidden" 
+                                                                               th:name="${_csrf.parameterName}" 
+                                                                               th:value="${_csrf.token}"/>
+
+                                                                    </div>
+
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="submit" class="btn btn-default"> Add Comment</button>
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row m-3">
+                                                    <h6 th:text="${#lists.size(article.comments)} +' Comments'"></h6>
+                                                </div>
+                                                <div id="viewComments">
+                                                    <hr id="hrCommentLine"/>
+                                                    <div th:each="comment : ${article.comments}" th:if="${#lists.size(article.comments) > 0}">
+                                                    <div class="row m-3">
+                                                        <div class="col-2">
+                                                            <img id="commentPicture" src="https://www.shazam.com/resources/9a8ea951f82d752342c7570f4182315bd2c771e4/no-artist-image.jpg"/>
+                                                        </div>
+                                                        <div class="col-10">
+                                                            <div style ="background-color:white;height:100px" class="wrap">
+                                                                <div class="comment">
+                                                                    <a style="float:right" sec:authorize="hasRole('ROLE_ADMIN')" th:href= "@{/deleteComment(id=${comment.id})}">Delete Comment&emsp;</a>
+                                                                    <br>
+                                                                    <b style="color:blue;text-align:right" th:text="${comment.title}">comment title</b>
+                                                                    <p th:text="${comment.body}">comment body</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <!-- End main body -->
+                                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+                                <script src='js/style.js'></script>
+                                <script src='js/viewBlog.js'></script>
+                                <script src="https://cdn.tiny.cloud/1/849uec5lzazwe77y2ztbjmomf0iysfarzmt5x67es025y60e/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+                                <script>
+                                                        tinymce.init({
+                                                            mode: "specific_textareas",
+                                                            editor_deselector: "col bodyComment",
+                                                            menubar: false,
+                                                            statusbar: false,
+                                                            toolbar: false,
+                                                            object_resizing: false,
+                                                            readonly: 1,
+                                                            plugins: "autoresize"
+                                                        });
+                                </script>
+                        </body>
+                        <footer>
+                            <hr/>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-6 col-xs-12">
+                                        <p style= "text-align:center" class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+                                            <a href="home">Food Blog</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                        </footer>
+                        </html>
