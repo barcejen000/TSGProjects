@@ -15,6 +15,16 @@ Once all rounds have been played, the final results are displayed(ties, wins, lo
 <h5>SummativeSums</h5>
 A program that adds all ints of a 1-dimenional array together and returns the result.
 <hr>
+<h3>Blog Management System</h3>
+Project in web development and database design done using NetBeans IDE and MySQL Workbench. Project implements JPA, a Spring MCV architectural design pattern, Spring Security, and Thymeleaf.
+A Blog/Content Management System for a small company that allows them to manage a blog website.
+This project was build in collaboration with another Java Apprentice in my cohort. Project work was divided into designated tasks/Web-page features and our group was successful due to our constant communication and involvement. 
+<p></p>
+Application incorporates TinyMCE editor for when a user creates or edits a blog post. The Admin can create, edit, delete, and view all active users. Only designated users in the system with login credential can create, edit, or delete blog posts or static pages. Anonymous users can view all published blogs and static pages and can leave comments on a blog post. All users can search published blog posts by hashtag, blog title, or author.
+<p></p>
+<p></p>
+I helped with setting up two of the application's entities with the appropriate annotations. On the web side of things (wrote html for creating and editing a blog, displaying all blogs, displaying a single static page, blog comments, displaying and editing hashtags, the home page, and styling). Worked on the Article, Hashtag, and Comment controller to create the mappings for pages. Validated form input using Spring Boot validation annotations and Thymeleaf conditionals for creating/editing a blog, editing a hashtag, and creating/editing users.
+<hr>
 <h3>DVDLibrary</h3>
 A program that allows a user to manage and store a collection of DVDs.
 Implements MVC design pattern and dependency injection.
@@ -58,12 +68,3 @@ Built a dynamic user-interface consuming a REST API using HTML, CSS, JavaScript,
 <p></p>
 Used JavaScript to handle browser events(clicks) to execute JavaScript methods. Used jQuery AJAX Methods to exchange data with the server, and update parts of the web page like GET requests to request and retrieve vending items and POST requests to vend an item. The application handles JSON appropriately in both success and failure cases and retrieves the error status and message to display it out in the web-page in the event that an item is out of stock or the user does not have sufficient funds.
 <hr>
-<h3>Blog Management System</h3>
-Project in web development and database design done using NetBeans IDE and MySQL Workbench. Project implements JPA, a Spring MCV architectural design pattern, Spring Security, and Thymeleaf.
-A Blog/Content Management System for a small company that allows them to manage a blog website.
-This project was build in collaboration with another Java Apprentice in my cohort. Project work was divided into designated tasks/Web-page features and our group was successful due to our constant communication and involvement. 
-<p></p>
-Application incorporates TinyMCE editor for when a user creates or edits a blog post. The Admin can create, edit, delete, and view all active users. Only designated users in the system with login credential can create, edit, or delete blog posts or static pages. Anonymous users can view all published blogs and static pages and can leave comments on a blog post. All users can search published blog posts by hashtag, blog title, or author.
-<p></p>
-<p></p>
-I helped with setting up two of the application's entities with the appropriate annotations. On the web side of things (wrote html for creating and editing a blog, displaying all blogs, displaying a single static page, blog comments, displaying and editing hashtags, the home page, and styling). Worked on the Article, Hashtag, and Comment controller to create the mappings for pages. Validated form input using Spring Boot validation annotations and Thymeleaf conditionals for creating/editing a blog, editing a hashtag, and creating/editing users.
