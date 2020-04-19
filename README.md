@@ -5,7 +5,7 @@ Projects completed during my time as a Java Apprentice in the Software Guild
 Assesment demonstrates proficiency in basic Java syntax involving console input and output, variables, flow of control statements, and expressions.
 
 <h5>DogGenetics</h5>
-Programs asks user for the name of their dog, which then generates a fake DNA background report of their pet. The report is printed to the console and includes a random assigned percentage to 5 dog breeds, which adds up to 100%.
+Program asks user for the name of their dog, which then generates a fake DNA background report of their pet. The report is printed to the console and includes a random assigned percentage to 5 dog breeds, which adds up to 100%.
 <h5>HealthyHearts</h5>
 Simple calculator that asks user for their age in order to calculate and display the healthy heart rate range for their age.
 <h5>RockPaperSissors</h5>
