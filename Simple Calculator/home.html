@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Simple Calculator</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Additional CSS files here -->
+    <H1>Simple Calculator</h1>
+  </head>
+  <body>
+    <div class= "container">
+                    <div class="row">
+                    <div class="col-4">
+                    </div>
+                    <div class="col-4" id="calcContainer" style= "border-radius: 10px">
+                    <div class= "row m-3 justify-content-center">
+                    <input class="col-10" id="calcDisplay" type="value" style= "border-radius: 5px" readonly></input>
+                  </div>
+                    <div id="firstRow" class ="row m-3 justify-content-center">
+                        <button type="button" id="sevenButton" value ="7" class="col-2 m-1 numberButton btn btn-default" onclick="display('7')">7</button>
+                            <button type="button" id="eightButton" value ="8" class="col-2 m-1 numberButton btn btn-default" onclick="display('8')">8</button>
+                              <button type="button" id="nineButton" value ="9"class="col-2 m-1 numberButton btn btn-default" onclick="display('9')">9</button>
+                              <button type="button" id="divideButton" value ="/"class=" col-2 m-1 operatorButton btn btn-default" onclick="display('/')">/</button>
+                      </div>
+                        <div id="secondRow" class ="row m-3 justify-content-center">
+                            <button type="button" id="fourButton" value ="4" class="col-2 m-1 numberButton btn btn-default" onclick="display('4')">4</button>
+                            <button type="button" id="fiveButton" value ="5" class="col-2 m-1 numberButton btn btn-default" onclick="display('5')">5</button>
+                            <button type="button" id="sixButton" value ="6" class="col-2 m-1 numberButton btn btn-default" onclick="display('6')">6</button>
+                          <button type="button" id="multiplicationButton" value ="*" class="col-2 m-1 operatorButton btn btn-default" onclick="display('*')">*</button>
+                          </div>
+                    <div id="thirdRow" class="row m-3 justify-content-center">
+                      <button type="button" id="oneButton" value ="1" class="col-2 m-1 numberButton btn btn-default" onclick="display('1')">1</button>
+                        <button type="button" id="twoButton" value ="2" class="col-2 m-1 numberButton btn btn-default" onclick="display('2')">2</button>
+                        <button type="button" id="threeButton" value ="3" class="col-2 m-1 numberButton btn btn-default" onclick="display('3')">3</button>
+                        <button type="button" id="subtractionButton" value ="-" class="col-2 m-1 operatorButton btn btn-default" onclick="display('-')">-</button>
+                        </div>
+                        <div id="fourthRow" class="row m-3 justify-content-center">
+                          <button type="button" id="zeroButton" value ="0" class="col-2 m-1 numberButton btn btn-default" onclick="display('0')">0</button>
+                            <button type="button" id="decimalButton" value ="." class="col-2 m-1 btn btn-default" onclick="display('.')">.</button>
+                            <button type="button" id="equalsButton" value ="=" class="col-2 m-1 btn btn-default" onclick="equals()">=</button>
+                            <button type="button" id="additionButton" value ="+" class="col-2 m-1 operatorButton btn btn-default" onclick="display('+')">+</button>
+                          </div>
+                          <div id="fifthRow" class="row m-3 justify-content-center">
+                            <button type="button" id="clearButton" class="col-8 m-1 btn btn-default" onclick="clearDisplay()">AC</button>
+                            </div>
+                        </div>
+                        <div class="col-4"
+                        </div>
+                      </div>
+                      </div>
+
+    <!-- Additional page content here -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>
