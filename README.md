@@ -16,7 +16,7 @@ Once all rounds have been played, the final results are displayed(ties, wins, lo
 A program that adds all ints of a 1-dimenional array together and returns the result.
 <hr>
 <h3>Blog Management System</h3>
-Project in web development and database design done using NetBeans IDE and MySQL Workbench. Project implements JPA, a Spring MCV architectural design pattern, Spring Security, and Thymeleaf.
+Project in web development and database design done using NetBeans IDE and MySQL Workbench. Project implements JPA, a Spring MVC architectural design pattern, Spring Security, and Thymeleaf.
 A Blog/Content Management System for a small company that allows them to manage a blog website.
 This project was build in collaboration with another Java Apprentice in my cohort. Project work was divided into designated tasks/Web-page features and our group was successful due to our constant communication and involvement. 
 <p></p>
